@@ -1,81 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cidadania Digital e IA</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cidadania Digital: Deepfakes e Desinformação</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <h1>Cidadania Digital e IA</h1>
+        <p>O desafio das Deepfakes e da Desinformação</p>
+    </header>
 
-<header>
-  <h1>Cidadania Digital e Inteligência Artificial</h1>
-  <p>O impacto das Deepfakes e da desinformação na sociedade</p>
-</header>
+    <main>
+        <section id="o-que">
+            <h2>O que são Deepfakes?</h2>
+            <p>Deepfakes são mídias sintéticas criadas por Inteligência Artificial que substituem o rosto ou a voz de uma pessoa em vídeos ou áudios, tornando quase impossível distinguir o real do falso.</p>
+        </section>
 
-<nav>
-  <a href="#introducao">Introdução</a>
-  <a href="#deepfakes">Deepfakes</a>
-  <a href="#desinformacao">Desinformação</a>
-  <a href="#consequencias">Consequências</a>
-  <a href="#conscientizacao">Conscientização</a>
-</nav>
+        <section id="impactos">
+            <h2>Consequências</h2>
+            <ul>
+                <li><strong>Danos à reputação:</strong> Uso indevido da imagem de pessoas.</li>
+                <li><strong>Desinformação política:</strong> Manipulação da opinião pública.</li>
+                <li><strong>Fraudes financeiras:</strong> Golpes utilizando voz clonada.</li>
+            </ul>
+        </section>
 
-<section id="introducao" class="card">
-  <h2>O que é Cidadania Digital?</h2>
-  <p>
-    Cidadania digital é o uso responsável, ético e seguro da tecnologia e da internet.
-  </p>
-</section>
+        <section id="protecao">
+            <h2>Como se proteger?</h2>
+            <p>Clique no botão para ver dicas essenciais:</p>
+            <button id="dicaBtn">Ver Dica de Ouro</button>
+            <p id="dicaDisplay"></p>
+        </section>
+    </main>
 
-<section id="deepfakes" class="card">
-  <h2>Deepfakes e Inteligência Artificial</h2>
-  <p>
-    Deepfakes são conteúdos manipulados por IA que simulam pessoas falando ou fazendo algo que não aconteceu.
-  </p>
-</section>
-
-<section id="desinformacao" class="card">
-  <h2>Desinformação</h2>
-  <p>
-    A desinformação é a divulgação de informações falsas ou enganosas.
-  </p>
-
-  <button class="btn" onclick="mostrarFakeNews()">Exemplo interativo</button>
-
-  <div id="fakeNews" class="fake-news-box">
-    ⚠️ Exemplo: "Cura milagrosa em 24h sem comprovação científica."
-  </div>
-</section>
-
-<section id="consequencias" class="card">
-  <h2>Consequências na Sociedade</h2>
-  <ul>
-    <li>Manipulação da opinião pública</li>
-    <li>Prejuízos sociais e políticos</li>
-    <li>Perda de confiança na informação</li>
-  </ul>
-</section>
-
-<section id="conscientizacao" class="card">
-  <h2>Como se proteger?</h2>
-  <ul>
-    <li>Verifique fontes</li>
-    <li>Evite compartilhar sem checar</li>
-    <li>Use sites confiáveis</li>
-  </ul>
-
-  <button class="btn" onclick="mostrarDica()">Receber dica</button>
-  <p id="dica"></p>
-</section>
-
-<footer>
-  <p>Projeto educativo sobre IA e Cidadania Digital</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
