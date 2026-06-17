@@ -1,10 +1,90 @@
-document.getElementById('btnSaibaMais').addEventListener('click', function() {
-    const dica = document.getElementById('dica');
-    if (dica.style.display === 'none' || dica.style.display === '') {
-        dica.style.display = 'block';
-        this.textContent = 'Ocultar dica';
-    } else {
-        dica.style.display = 'none';
-        this.textContent = 'Como se proteger?';
-    }
-});
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, #1e3a8a, #0ea5e9);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.2rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  background: #111827;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #0ea5e9;
+  color: black;
+}
+
+section {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #1f2937;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: #0ea5e9;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: #38bdf8;
+}
+
+.fake-news-box {
+  margin-top: 10px;
+  padding: 15px;
+  border-left: 5px solid #ef4444;
+  background: #111827;
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111827;
+}
