@@ -37,4 +37,6 @@ button {
     font-size: 1rem;
 }
 
-button:hover { background: #219150; }
+button:hover {
+    background: #219150;
+}
