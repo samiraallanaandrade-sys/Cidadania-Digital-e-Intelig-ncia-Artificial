@@ -1,11 +1,21 @@
-document.getElementById('btnSaibaMais').addEventListener('click', function () {
-    const dica = document.getElementById('dica');
+function mostrarFakeNews() {
+  const box = document.getElementById("fakeNews");
 
-    if (dica.style.display === 'none' || dica.style.display === '') {
-        dica.style.display = 'block';
-        this.textContent = 'Ocultar dica';
-    } else {
-        dica.style.display = 'none';
-        this.textContent = 'Como se proteger?';
-    }
-});
+  if (box.style.display === "block") {
+    box.style.display = "none";
+  } else {
+    box.style.display = "block";
+  }
+}
+
+function mostrarDica() {
+  const dicas = [
+    "Sempre confira a fonte da notícia.",
+    "Desconfie de conteúdos muito sensacionalistas.",
+    "Busque a mesma notícia em outros sites.",
+    "Imagens podem ser manipuladas por IA (deepfake)."
+  ];
+
+  const random = Math.floor(Math.random() * dicas.length);
+  document.getElementById("dica").innerText = "💡 " + dicas[random];
+}
