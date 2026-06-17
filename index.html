@@ -1,39 +1,210 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cidadania Digital e IA</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cidadania Digital e IA</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(90deg, #1e3a8a, #0ea5e9);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #111827;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: #0ea5e9;
+      color: #000;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #1f2937;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #0ea5e9;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111827;
+      margin-top: 40px;
+    }
+
+    .fake-news-box {
+      margin-top: 10px;
+      padding: 15px;
+      border-left: 5px solid #ef4444;
+      background: #111827;
+      display: none;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Cidadania Digital na Era da IA</h1>
-        <p>Entenda o impacto das Deepfakes e da Desinformação</p>
-    </header>
 
-    <main>
-        <section id="sobre">
-            <h2>O que são Deepfakes?</h2>
-            <p>Deepfakes são mídias sintéticas criadas por Inteligência Artificial que substituem o rosto ou a voz de uma pessoa em vídeos ou áudios, tornando quase impossível distinguir o real do falso.</p>
-        </section>
+<header>
+  <h1>Cidadania Digital e Inteligência Artificial</h1>
+  <p>O impacto das Deepfakes e da desinformação na sociedade</p>
+</header>
 
-        <section id="desinformacao">
-            <h2>O Perigo da Desinformação</h2>
-            <p>A velocidade com que informações falsas se espalham nas redes sociais compromete o debate público e a confiança nas instituições.</p>
+<nav>
+  <a href="#introducao">Introdução</a>
+  <a href="#deepfakes">Deepfakes</a>
+  <a href="#desinformacao">Desinformação</a>
+  <a href="#consequencias">Consequências</a>
+  <a href="#conscientizacao">Conscientização</a>
+</nav>
 
-            <button id="btnSaibaMais">Como se proteger?</button>
+<section id="introducao" class="card">
+  <h2>O que é Cidadania Digital?</h2>
+  <p>
+    Cidadania digital é o uso responsável, ético e seguro da tecnologia e da internet.
+    Envolve compreender como a informação circula e como podemos evitar a propagação de conteúdos enganosos.
+  </p>
+</section>
 
-            <p id="dica" class="hidden">
-                <strong>Dica:</strong> Sempre verifique a fonte, procure por erros visuais em vídeos e use ferramentas de verificação de fatos (fact-checking).
-            </p>
-        </section>
-    </main>
+<section id="deepfakes" class="card">
+  <h2>Deepfakes e Inteligência Artificial</h2>
+  <p>
+    Deepfakes são conteúdos (vídeos, áudios ou imagens) manipulados por inteligência artificial
+    para parecerem reais, muitas vezes simulando pessoas falando ou fazendo coisas que nunca aconteceram.
+  </p>
+</section>
 
-    <footer>
-        <p>&copy; 2026 - Conscientização Digital</p>
-    </footer>
+<section id="desinformacao" class="card">
+  <h2>Desinformação</h2>
+  <p>
+    A desinformação é a divulgação de informações falsas ou distorcidas com ou sem intenção de enganar.
+    Nas redes sociais, ela se espalha rapidamente e pode influenciar opiniões e decisões.
+  </p>
 
-    <script src="script.js"></script>
+  <button class="btn" onclick="mostrarFakeNews()">Exemplo interativo</button>
+
+  <div id="fakeNews" class="fake-news-box">
+    ⚠️ Exemplo: "Cura milagrosa descoberta em 24h" — essa informação não tem fonte confiável.
+  </div>
+</section>
+
+<section id="consequencias" class="card">
+  <h2>Consequências na Sociedade</h2>
+  <ul>
+    <li>Manipulação da opinião pública</li>
+    <li>Prejuízos políticos e sociais</li>
+    <li>Perda de confiança na mídia</li>
+    <li>Cyberbullying e difamação</li>
+  </ul>
+</section>
+
+<section id="conscientizacao" class="card">
+  <h2>Como se proteger?</h2>
+  <p>Algumas atitudes importantes:</p>
+  <ul>
+    <li>Verificar fontes antes de compartilhar</li>
+    <li>Desconfiar de conteúdos muito sensacionalistas</li>
+    <li>Usar sites confiáveis de checagem</li>
+    <li>Entender como a IA pode gerar manipulações</li>
+  </ul>
+
+  <button class="btn" onclick="mostrarDica()">Receber dica</button>
+  <p id="dica" style="margin-top:10px;"></p>
+</section>
+
+<footer>
+  <p>Projeto educativo sobre Cidadania Digital e Inteligência Artificial</p>
+</footer>
+
+<script>
+  function mostrarFakeNews() {
+    const box = document.getElementById("fakeNews");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  }
+
+  function mostrarDica() {
+    const dicas = [
+      "Sempre confira a data da notícia.",
+      "Procure a mesma informação em mais de uma fonte.",
+      "Imagens podem ser manipuladas por IA.",
+      "Quando em dúvida, não compartilhe."
+    ];
+
+    const random = Math.floor(Math.random() * dicas.length);
+    document.getElementById("dica").innerText = "💡 " + dicas[random];
+  }
+</script>
+
 </body>
 </html>
