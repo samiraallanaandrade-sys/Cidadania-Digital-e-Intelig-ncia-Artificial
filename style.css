@@ -1,0 +1,10 @@
+document.getElementById('btnSaibaMais').addEventListener('click', function() {
+    const dica = document.getElementById('dica');
+    if (dica.style.display === 'none' || dica.style.display === '') {
+        dica.style.display = 'block';
+        this.textContent = 'Ocultar dica';
+    } else {
+        dica.style.display = 'none';
+        this.textContent = 'Como se proteger?';
+    }
+});
